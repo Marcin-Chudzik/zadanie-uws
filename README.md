@@ -23,6 +23,7 @@ This is a calendar application built with Django, providing a platform for viewi
 - **Monthly Calendar View**: Easily browse events planned for a specific month.
 - **Event Details**: Click on an event to view its details, including time, duration, and location.
 - **API Integration**: Events are fetched dynamically from a provided REST API.
+- **Full Responsive**: Application is styled to be reponsive on devices from mobile to desktop.
 
 ## Technologies
 - **Backend**: Django 5
@@ -41,5 +42,16 @@ This is a calendar application built with Django, providing a platform for viewi
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/event-calendar.git
-   cd event-calendar
+   git clone https://github.com/Marcin-Chudzik/zadanie-uws.git
+   cd zadanie-uws
+2. **Setup the environment variables in docker-compose.yml file (example below)**:
+   ```bash
+   SECRET_KEY=12e01d20129kds9ks2k1s0d9fkadsad01-2d
+   DEBUG=True
+   ALLOWED_HOSTS=*
+   API_KEY=correct-api-key
+3. **Build and run Docker app container with followed command**:
+   ```bash
+   docker-compose up --build
+4. **Open web app in browser under link below**:
+   <br><http://127.0.0.1:8000/events/monthly/>

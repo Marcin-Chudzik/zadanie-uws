@@ -14,7 +14,7 @@ services:
       sh -c "python manage.py build_dep && 
              python manage.py runserver 0.0.0.0:8000"
     environment:
-      - SECRET_KEY=changme
-      - DEBUG=True
-      - ALLOWED_HOSTS=*
-      - API_KEY=e431db11fbfcffb70deb257dae391333
+      - SECRET_KEY=changeme
+      - DEBUG=changeme
+      - ALLOWED_HOSTS=changeme
+      - API_KEY=changeme
