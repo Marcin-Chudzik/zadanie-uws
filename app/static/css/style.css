@@ -1,0 +1,123 @@
+.navbar {
+  background-color: #712cf9;
+}
+
+.navbar h1 {
+  color: #e4d7fe;
+}
+
+.offcanvas {
+  z-index: 1060;
+}
+
+h2 {
+  font-size: clamp(0.6rem, 1.5rem);
+}
+
+.col-1-7 {
+  flex: 0 0 14.2857%; /* 100% / 7 */
+  max-width: 14.2857%;
+}
+
+.calendar-row {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.calendar-header {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.calendar-card {
+  height: clamp(100px, 10vw, 15rem);
+  margin: 1px;
+  padding: 5px;
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.calendar-card > p {
+  font-size: clamp(1rem, 1.5rem, 2rem);
+}
+
+.calendar-card-events {
+  display: block;
+}
+
+.calendar-card-events,
+.offcanvas-body {
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.calendar-card-events::-webkit-scrollbar,
+.offcanvas-body::-webkit-scrollbar {
+  display: none;
+}
+
+.calendar-card-events-counter {
+  display: none;
+  height: 40px;
+}
+
+.empty {
+  display: none !important;
+}
+
+.text-bg-violet {
+  background-color: #712cf9;
+}
+
+@media (max-width: 1000px) {
+  .calendar-card-events {
+    display: none;
+  }
+
+  .calendar-card-events-counter {
+    display: block;
+  }
+
+  .empty {
+    display: none !important;
+  }
+}
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
